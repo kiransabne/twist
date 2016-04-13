@@ -7,11 +7,13 @@
     <% end %>
   </div>
 
-  <div id='sidebar' class='col-md-3'>
-    <% if current_user.author? %>
-      <%= link_to "Add Book", new_book_path %>
+  <div id='sidebar' class='col-md-4'>
+    <% if owner? %>
+      <ul>
+        <li><%= link_to "Add Book", new_book_path %></li>
+      </ul>
     <% end %>
   </div>
 
-  
+
 </div>
